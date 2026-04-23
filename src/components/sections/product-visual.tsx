@@ -9,10 +9,8 @@ export function ProductVisual() {
         className="lumi-float object-contain object-center drop-shadow-[0_28px_34px_rgba(20,33,42,0.16)]"
         fill
         sizes="(max-width: 768px) 90vw, 560px"
-        height={1600}
         priority
         src="/assets/lumi-character.png"
-        width={1600}
       />
       </div>
     </div>
