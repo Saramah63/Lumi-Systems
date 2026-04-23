@@ -10,7 +10,13 @@ export const metadata: Metadata = {
     "About Lumi Systems, an early-stage company building digital tools for emotional intelligence, communication, and healthier development.",
 };
 
-const values = ["Child-centered design", "Empathy", "Clarity", "Innovation with purpose"];
+const values = [
+  "Child-centered design",
+  "Emotional clarity and safety",
+  "Simplicity and usability",
+  "Real-world impact",
+  "Long-term human development",
+];
 
 export default function AboutPage() {
   return (
@@ -25,8 +31,8 @@ export default function AboutPage() {
           <div className="blue-panel rounded-[2rem] p-8 md:p-10">
             <p className="eyebrow mb-5">Mission</p>
             <h2 className="font-display text-4xl font-bold leading-tight">
-              To make emotional and social learning more accessible, engaging, and human-centered through thoughtful
-              digital product design.
+              To make emotional and social learning more accessible, engaging, and practical in early childhood
+              environments through thoughtful digital design.
             </h2>
           </div>
           <div className="rounded-[2rem] border border-[var(--line)] bg-white/70 p-8 md:p-10">
@@ -41,10 +47,25 @@ export default function AboutPage() {
       <section className="section-space bg-[var(--mist)]">
         <Reveal className="container-shell">
           <SectionHeading eyebrow="Values" title="Principles for a high-trust product category." />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {values.map((value) => (
               <PremiumCard key={value} title={value} />
             ))}
+          </div>
+        </Reveal>
+      </section>
+      <section className="section-space">
+        <Reveal className="container-shell grid gap-5 max-w-4xl">
+          <SectionHeading eyebrow="Founder" title="About the Founder" />
+          <div className="rounded-[2rem] border border-[var(--line)] bg-white/72 p-8 md:p-10">
+            <p className="body-large">
+              Lumi Systems was founded by Sara Mahmodi, a product-focused designer working at the intersection of
+              human-centered design, emotional intelligence, and digital product development.
+            </p>
+            <p className="body-large mt-5">
+              Her work focuses on building structured systems that simplify complex human challenges, starting with
+              emotional learning in early childhood.
+            </p>
           </div>
         </Reveal>
       </section>

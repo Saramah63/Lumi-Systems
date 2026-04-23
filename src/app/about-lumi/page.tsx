@@ -20,6 +20,14 @@ const capabilities = [
   "Everyday interaction skills",
 ];
 
+const benefits = [
+  "Children develop stronger emotional vocabulary",
+  "Everyday conflicts become easier to manage",
+  "Communication improves in group settings",
+  "Educators gain structured support tools",
+  "Emotional learning becomes consistent—not occasional",
+];
+
 export default function AboutLumiPage() {
   return (
     <main>
@@ -55,6 +63,22 @@ export default function AboutLumiPage() {
             eyebrow="Product vision"
             title="Built for a larger future"
           />
+        </Reveal>
+      </section>
+      <section className="section-space">
+        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.72fr_0.88fr]">
+          <SectionHeading
+            eyebrow="Real-world use"
+            title="Designed for real-world use"
+            body="Lumi is not designed as entertainment. It is designed as a practical support tool for everyday emotional and social learning in real environments."
+          />
+          <div className="grid gap-4">
+            {benefits.map((benefit) => (
+              <div className="rounded-2xl border border-[var(--line)] bg-white/72 p-5 font-extrabold" key={benefit}>
+                {benefit}
+              </div>
+            ))}
+          </div>
         </Reveal>
       </section>
     </main>
