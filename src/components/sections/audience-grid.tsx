@@ -4,20 +4,20 @@ import { SectionHeading } from "@/components/shared/section-heading";
 
 const audience = [
   {
-    title: "Early childhood education providers",
-    body: "Support emotional and social learning through structured digital interaction.",
+    title: "Daycare centers",
+    body: "Bring structured emotional learning into everyday group environments.",
   },
   {
     title: "Educators and assistants",
-    body: "Reinforce communication, empathy, and practical everyday social skills.",
+    body: "Support communication, emotional guidance, and day-to-day interaction.",
   },
   {
-    title: "Future family use",
-    body: "Extend emotional learning into home environments through accessible interaction.",
+    title: "Early learning programs",
+    body: "Use Lumi within existing routines across different learning settings.",
   },
   {
-    title: "Research and innovation partners",
-    body: "Collaborate on piloting, evaluation, and future development.",
+    title: "Research and pilot partners",
+    body: "Collaborate on testing, feedback, and future product development.",
   },
 ];
 
@@ -25,7 +25,7 @@ export function AudienceGrid() {
   return (
     <section className="section-space bg-[var(--sand)]">
       <Reveal className="container-shell">
-        <SectionHeading title="Built for the environments shaping early development" />
+        <SectionHeading title="Built for early childhood environments" />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {audience.map((item) => (
             <PremiumCard body={item.body} key={item.title} title={item.title} variant="feature" />

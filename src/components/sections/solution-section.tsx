@@ -2,10 +2,10 @@ import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 
 const points = [
-  "Guided scenarios",
-  "Expressive interaction",
-  "Developmentally appropriate design",
-  "Real-world use potential",
+  "Guided emotional scenarios",
+  "Simple and consistent structure",
+  "Designed for everyday use",
+  "No complex setup",
 ];
 
 export function SolutionSection() {
@@ -13,8 +13,8 @@ export function SolutionSection() {
     <section className="section-space">
       <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.9fr_0.7fr] lg:items-center">
         <SectionHeading
-          body="Lumi introduces guided, interactive experiences where children explore real-life social situations, practice responses, and build emotional understanding through engagement—not passive content."
-          title="A new approach to emotional learning"
+          body="Lumi introduces guided interactive experiences that help children explore real-life social situations and practice appropriate responses in a simple, repeatable way."
+          title="A structured way to support emotional learning"
         />
         <div className="blue-panel grid gap-4 rounded-[2rem] p-6 md:p-8">
           {points.map((item) => (

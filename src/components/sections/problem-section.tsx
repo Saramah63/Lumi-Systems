@@ -1,7 +1,11 @@
 import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
 
-const insights = ["Early years matter", "Everyday interaction shapes development", "Support tools are limited"];
+const insights = [
+  "Children struggle to express feelings",
+  "Conflicts require time and attention",
+  "Support depends on individual staff capacity",
+];
 
 export function ProblemSection() {
   return (
@@ -9,8 +13,8 @@ export function ProblemSection() {
       <Reveal className="container-shell">
         <SectionHeading
           centered
-          body="Children begin learning how to express feelings, communicate needs, and respond to others during their earliest years. Yet many environments still lack practical, engaging tools to support this development consistently."
-          title="Emotional skills are critical — but often under-supported."
+          body="Conflicts, communication difficulties, and emotional reactions happen daily in early childhood environments. Supporting these moments consistently can be difficult without structured tools."
+          title="Everyday emotional challenges are part of daycare life."
         />
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {insights.map((item) => (

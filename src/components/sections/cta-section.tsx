@@ -9,8 +9,8 @@ type CTASectionProps = {
 };
 
 export function CTASection({
-  title = "Bring emotionally intelligent learning into real environments.",
-  body = "Interested in piloting Lumi, exploring collaboration, or following development? Start the conversation with Lumi Systems.",
+  title = "Interested in trying Lumi in your daycare?",
+  body = "We are currently exploring pilot collaborations with early childhood environments.",
   primaryLabel = "Request a Demo",
   secondaryLabel = "Contact Us",
 }: CTASectionProps) {
