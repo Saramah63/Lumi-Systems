@@ -24,6 +24,9 @@ export function HeroSection() {
           <p className="max-w-xl text-sm font-bold leading-6 text-[var(--muted)]">
             Designed for early learning environments, future family use, and research-informed development.
           </p>
+          <p className="max-w-xl rounded-2xl border border-[var(--line)] bg-white/64 px-4 py-3 text-sm font-bold leading-6 text-[var(--foreground)]">
+            Currently in early-stage development with a focus on pilot environments and real-world application.
+          </p>
         </Reveal>
         <Reveal className="lg:justify-self-end">
           <ProductVisual />

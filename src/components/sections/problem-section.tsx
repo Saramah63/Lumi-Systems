@@ -9,7 +9,7 @@ export function ProblemSection() {
       <Reveal className="container-shell">
         <SectionHeading
           centered
-          body="Children begin learning how to express feelings, communicate needs, and respond to others during their earliest years. Yet many learning environments still lack practical, engaging, and developmentally appropriate tools to support this process consistently."
+          body="Children begin learning how to express feelings, communicate needs, and respond to others during their earliest years. Yet many environments still lack practical, engaging tools to support this development consistently."
           title="Emotional skills are critical — but often under-supported."
         />
         <div className="mt-12 grid gap-4 md:grid-cols-3">

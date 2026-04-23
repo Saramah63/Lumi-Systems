@@ -13,8 +13,7 @@ export function SolutionSection() {
     <section className="section-space">
       <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.9fr_0.7fr] lg:items-center">
         <SectionHeading
-          body="Lumi introduces guided, interactive experiences where children can explore real-world social situations, practice responses, and build emotional understanding through engagement rather than passive content."
-          eyebrow="Solution"
+          body="Lumi introduces guided, interactive experiences where children explore real-life social situations, practice responses, and build emotional understanding through engagement—not passive content."
           title="A new approach to emotional learning"
         />
         <div className="blue-panel grid gap-4 rounded-[2rem] p-6 md:p-8">

@@ -25,10 +25,10 @@ export function AudienceGrid() {
   return (
     <section className="section-space bg-[var(--sand)]">
       <Reveal className="container-shell">
-        <SectionHeading eyebrow="Who it is for" title="Designed for the people shaping early emotional learning." />
+        <SectionHeading title="Built for the environments shaping early development" />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {audience.map((item, index) => (
-            <PremiumCard body={item.body} index={`0${index + 1}`} key={item.title} title={item.title} variant="feature" />
+          {audience.map((item) => (
+            <PremiumCard body={item.body} key={item.title} title={item.title} variant="feature" />
           ))}
         </div>
       </Reveal>

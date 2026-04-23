@@ -12,7 +12,7 @@ export function ProductPreview() {
         <ProductVisual />
         <div className="grid gap-7">
           <SectionHeading
-            body="Lumi is an interactive digital character designed for children aged approximately 4–6. Through guided scenarios and expressive interaction, Lumi helps children explore emotions, communication, and everyday social situations in a way that feels safe, engaging, and developmentally appropriate."
+            body="Lumi is an interactive digital character designed for children aged 4–6. Through guided scenarios and expressive interaction, Lumi helps children explore emotions, communication, and everyday social situations in a way that is safe, engaging, and developmentally appropriate."
             eyebrow="Product preview"
             title="Meet Lumi"
           />
