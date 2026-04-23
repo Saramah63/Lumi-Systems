@@ -14,7 +14,7 @@ export function CredibilityStrip() {
       <Reveal className="container-shell">
         <SectionHeading
           title="Designed for real-world use"
-          body="Currently in early-stage development with a focus on pilot environments."
+          body="Currently in early-stage development with a focus on pilot environments, real use, and fit within daily routines."
         />
         <div className="mt-10 grid gap-4 text-sm font-extrabold text-[var(--foreground)] md:grid-cols-4">
           {credibility.map((item) => (
