@@ -14,7 +14,7 @@ export function HeroSection() {
             <span className="hidden md:block">in daycare.</span>
             <span className="md:hidden">A practical tool for emotional learning in daycare.</span>
           </h1>
-          <p className="max-w-[720px] text-[clamp(1.125rem,1.7vw,1.375rem)] leading-[1.62] text-[var(--muted)]">
+          <p className="max-w-[560px] text-[clamp(1.125rem,1.45vw,1.375rem)] leading-[1.55] text-[var(--muted)]">
             Lumi helps children practice communication, emotions, and everyday social situations through guided
             interactive experiences designed for real daycare environments.
           </p>
