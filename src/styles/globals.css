@@ -107,6 +107,33 @@ textarea {
   animation: lumiFloat 5.5s ease-in-out infinite;
 }
 
+.hero-visual-enter {
+  animation: heroVisualIn 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-lumi {
+  animation: heroLumiFloat 6.5s ease-in-out infinite;
+}
+
+.hero-tag,
+.hero-tag-delayed {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.hero-tag {
+  animation: heroTagFloat 7s ease-in-out infinite;
+}
+
+.hero-tag-delayed {
+  animation: heroTagFloat 7s ease-in-out infinite 900ms;
+}
+
+.hero-tag:hover,
+.hero-tag-delayed:hover {
+  box-shadow: 0 18px 36px rgba(20, 33, 42, 0.12);
+  transform: translateY(-2px);
+}
+
 @keyframes lumiFloat {
   0%,
   100% {
@@ -114,6 +141,37 @@ textarea {
   }
   50% {
     transform: translateX(-50%) translateY(-12px);
+  }
+}
+
+@keyframes heroVisualIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heroLumiFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes heroTagFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
