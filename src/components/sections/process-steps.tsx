@@ -23,7 +23,14 @@ export function ProcessSteps() {
   return (
     <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
       {steps.map((step, index) => (
-        <PremiumCard body={step.body} index={`0${index + 1}`} key={step.title} title={step.title} variant="minimal" />
+        <PremiumCard
+          body={step.body}
+          className="stagger-item"
+          index={`0${index + 1}`}
+          key={step.title}
+          title={step.title}
+          variant="minimal"
+        />
       ))}
     </div>
   );

@@ -2,6 +2,9 @@ export const siteConfig = {
   name: "Lumi Systems",
   productName: "Lumi",
   description:
-    "Lumi Systems builds interactive digital tools that help children develop emotional awareness, communication skills, and healthier everyday interactions.",
+    "Lumi Systems develops human-centered learning tools for emotional intelligence, communication, and social development.",
   url: "https://lumi-systems.com",
+  productExperienceUrl: "https://lumifriends.app",
+  email: "hello@lumisystems.fi",
+  location: "Turku, Finland",
 } as const;

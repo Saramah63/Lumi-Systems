@@ -18,7 +18,7 @@ const variants = {
 export function ButtonLink({ href, children, variant = "primary", className = "" }: ButtonLinkProps) {
   return (
     <Link
-      className={`inline-flex min-h-12 items-center justify-center rounded-full px-5 py-3 text-sm font-extrabold transition duration-200 ${variants[variant]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-200 ${variants[variant]} ${className}`}
       href={href}
     >
       {children}

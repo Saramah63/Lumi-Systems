@@ -1,6 +1,7 @@
 export type ContactReason =
-  | "Pilot interest"
+  | "Request a demo"
+  | "Daycare pilot"
   | "Partnership"
   | "Research collaboration"
-  | "Funding / investor discussion"
+  | "Funding or grants"
   | "General inquiry";

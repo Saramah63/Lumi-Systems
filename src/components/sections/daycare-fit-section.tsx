@@ -16,12 +16,11 @@ export function DaycareFitSection() {
           title="Designed to fit into daily routines"
           body="Lumi is not an additional program to manage. It is a flexible support tool that can be used within existing routines."
         />
-        <div className="rounded-[2rem] border border-[var(--line)] bg-white/72 p-8 md:p-10">
+        <div className="panel-surface p-8 md:p-10">
           <div className="grid gap-4">
             {useCases.map((item) => (
-              <div className="flex items-center gap-3 border-b border-[var(--line)] pb-4 last:border-0 last:pb-0" key={item}>
-                <span className="h-2.5 w-2.5 rounded-full bg-[var(--blue)]" />
-                <span className="font-extrabold text-[var(--foreground)]">{item}</span>
+              <div className="list-card border-0 bg-transparent p-0 shadow-none hover:translate-y-0 hover:bg-transparent hover:shadow-none" key={item}>
+                <span>{item}</span>
               </div>
             ))}
           </div>

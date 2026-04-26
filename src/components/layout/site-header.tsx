@@ -25,20 +25,21 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-shell flex h-20 items-center justify-between gap-6">
-        <Link className="flex items-center gap-3 font-extrabold text-[var(--foreground)]" href="/">
-          <span className="relative h-8 w-8 rounded-full bg-[linear-gradient(135deg,#6fb6d7,#dff4fb_46%,#f1ded5)] shadow-[0_10px_28px_rgba(111,182,215,0.28)]">
+        <Link className="flex items-center gap-3 font-semibold text-[var(--foreground)]" href="/">
+          <span className="relative h-8 w-8 rounded-full border border-[rgba(111,182,215,0.28)] bg-[radial-gradient(circle_at_35%_32%,#f4fdff_0%,#b9e2f2_42%,#6fb6d7_76%,#5ea5c6_100%)] shadow-[0_10px_28px_rgba(111,182,215,0.24)]">
+            <span className="absolute left-1/2 top-1/2 h-4.5 w-4.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/72 blur-[1px]" />
             <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white" />
           </span>
           <span>Lumi Systems</span>
         </Link>
 
-        <nav className="hidden items-center gap-5 text-sm font-bold text-[var(--muted)] lg:flex">
+        <nav className="hidden items-center gap-5 text-sm font-semibold text-[var(--muted)] lg:flex">
           {mainNavItems.map((item) => (
             <Link className="transition hover:text-[var(--foreground)]" href={item.href} key={item.href}>
               {item.label}
             </Link>
           ))}
-          <ButtonLink className="ml-1 min-h-11 px-4 py-2" href="/contact">
+          <ButtonLink className="ml-1 min-h-11 px-4 py-2" href="/request-demo">
             Request a Demo
           </ButtonLink>
         </nav>
@@ -58,7 +59,7 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <nav className="container-shell grid gap-3 border-t border-[var(--line)] bg-[rgba(255,253,248,0.98)] py-5 text-sm font-bold text-[var(--muted)] lg:hidden">
+        <nav className="container-shell grid gap-3 border-t border-[var(--line)] bg-[rgba(255,253,248,0.98)] py-5 text-sm font-semibold text-[var(--muted)] lg:hidden">
           {mainNavItems.map((item) => (
             <Link
               className="rounded-full px-2 py-2 transition hover:text-[var(--foreground)]"
@@ -69,7 +70,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <ButtonLink href="/contact">Request a Demo</ButtonLink>
+          <ButtonLink href="/request-demo">Request a Demo</ButtonLink>
         </nav>
       ) : null}
     </header>

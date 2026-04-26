@@ -1,19 +1,21 @@
 export const mainNavItems = [
-  { href: "/", label: "Home" },
-  { href: "/about-lumi", label: "About Lumi" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/research", label: "Research & Impact" },
-  { href: "/partners", label: "For Partners" },
-  { href: "/about", label: "About" },
+  { href: "/about-lumi", label: "Lumi" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/research", label: "Research" },
+  { href: "/solutions", label: "Daycares" },
+  { href: "/partners", label: "Partners" },
+  { href: "/about", label: "Company" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
 export const footerNavItems = [
-  { href: "/about-lumi", label: "About Lumi" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/research", label: "Research & Impact" },
-  { href: "/partners", label: "For Partners" },
+  { href: "/about-lumi", label: "Lumi" },
+  { href: "/how-it-works", label: "How It Works" },
+  { href: "/request-demo", label: "Request Access" },
+  { href: "/request-demo", label: "Request a Demo" },
+  { href: "/solutions", label: "Daycares" },
+  { href: "/partners", label: "Partners" },
+  { href: "/research", label: "Research" },
+  { href: "/about", label: "Company" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms" },
 ] as const;

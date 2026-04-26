@@ -16,11 +16,10 @@ export function CredibilityStrip() {
           title="Designed for real-world use"
           body="Currently in early-stage development with a focus on pilot environments, real use, and fit within daily routines."
         />
-        <div className="mt-10 grid gap-4 text-sm font-extrabold text-[var(--foreground)] md:grid-cols-4">
+        <div className="mt-10 grid gap-4 md:grid-cols-4">
           {credibility.map((item) => (
-            <div className="flex items-center gap-3 rounded-2xl border border-[var(--line)] bg-white/72 p-5" key={item}>
-              <span className="h-2 w-2 rounded-full bg-[var(--blue)]" />
-              {item}
+            <div className="list-card" key={item}>
+              <span>{item}</span>
             </div>
           ))}
         </div>

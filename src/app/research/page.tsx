@@ -1,63 +1,89 @@
 import type { Metadata } from "next";
+import { ButtonLink } from "@/components/ui/button-link";
 import { PageHero } from "@/components/shared/page-hero";
 import { Reveal } from "@/components/shared/reveal";
-import { SectionHeading } from "@/components/shared/section-heading";
 import { PremiumCard } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Research & Impact",
-  description:
-    "Research-informed positioning, focus areas, and intended impact goals for Lumi Systems and early childhood emotional learning.",
+  title: "Research",
+  description: "Research, ethics, and real-world evaluation priorities for Lumi Systems.",
 };
 
-const focusAreas = [
-  "Social-emotional learning",
-  "Emotional intelligence",
-  "Communication skills",
-  "Early childhood development",
-  "Child-centered digital learning",
-  "Ethical human-centered design",
+const focus = [
+  {
+    title: "Educator usability",
+    body: "Can educators use it easily?",
+  },
+  {
+    title: "Child engagement",
+    body: "Do children understand and participate?",
+  },
+  {
+    title: "Scenario relevance",
+    body: "Do the situations reflect real daycare life?",
+  },
+  {
+    title: "Routine fit",
+    body: "Can it work without disrupting the day?",
+  },
 ];
 
-const impactGoals = [
-  "Stronger emotional vocabulary",
-  "Healthier peer interaction",
-  "Improved everyday communication",
-  "More engaging SEL support",
-  "Scalable support tools for educators and families",
+const principles = [
+  "Adult-led use",
+  "Age-appropriate language",
+  "Privacy-conscious development",
+  "No diagnostic or therapy claims",
+  "Human care remains central",
 ];
 
-export default function ResearchImpactPage() {
+export default function ResearchPage() {
   return (
     <main>
       <PageHero
-        body="Lumi Systems is grounded in the belief that emotional and communication skills developed in early childhood matter deeply for wellbeing, relationships, and learning."
-        eyebrow="Research & Impact"
-        title="Research-informed by design"
+        body="Developed with evidence-awareness, ethics, and real-world evaluation in mind."
+        eyebrow="Research"
+        title="Research"
       />
+
       <section className="section-space">
-        <Reveal className="container-shell">
-          <SectionHeading title="Focus areas" />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {focusAreas.map((area) => (
-              <PremiumCard key={area} title={area} />
+        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start lg:gap-16">
+          <div className="grid gap-4">
+            <p className="eyebrow">Why it matters</p>
+            <h2 className="font-display max-w-[12ch] text-[36px] leading-[0.98] tracking-[-0.03em] text-slate-950 md:text-[52px] lg:text-[60px]">
+              Emotional and social skills begin early.
+            </h2>
+            <p className="body-copy max-w-[34rem]">
+              Children build self-regulation, empathy, cooperation, and communication through repeated everyday
+              interactions.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {focus.map((item) => (
+              <PremiumCard body={item.body} key={item.title} marker="dot" title={item.title} variant="compact" />
             ))}
           </div>
         </Reveal>
       </section>
+
       <section className="section-space bg-[var(--mist)]">
-        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.75fr_0.85fr]">
-          <SectionHeading eyebrow="Intended impact" title="Built for meaningful human value" />
+        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start lg:gap-16">
           <div className="grid gap-4">
-            {impactGoals.map((goal) => (
-              <div className="rounded-2xl border border-[var(--line)] bg-white/70 p-5 font-extrabold" key={goal}>
-                {goal}
-              </div>
-            ))}
-            <p className="mt-4 text-sm font-bold leading-7 text-[var(--muted)]">
-              Lumi Systems is committed to evidence-aware development and future testing as the product evolves.
-            </p>
+            <p className="eyebrow">Ethical principles</p>
+            <h2 className="font-display max-w-[11ch] text-[36px] leading-[0.98] tracking-[-0.03em] text-slate-950 md:text-[52px] lg:text-[60px]">
+              Built for careful, responsible use.
+            </h2>
           </div>
+          <div className="grid gap-4">
+            {principles.map((item) => (
+              <PremiumCard key={item} marker="dot" title={item} variant="compact" />
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="pb-20 md:pb-24">
+        <Reveal className="container-shell text-center">
+          <ButtonLink href="/contact">Discuss Research Collaboration</ButtonLink>
         </Reveal>
       </section>
     </main>

@@ -1,76 +1,108 @@
 import type { Metadata } from "next";
+import { ButtonLink } from "@/components/ui/button-link";
 import { PageHero } from "@/components/shared/page-hero";
 import { Reveal } from "@/components/shared/reveal";
-import { SectionHeading } from "@/components/shared/section-heading";
+import { PremiumCard } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Solutions",
-  description:
-    "Practical emotional learning support for early childhood education, educators, and future family use.",
+  title: "Daycares",
+  description: "Structured emotional learning support for daily daycare life.",
 };
 
-const solutions = [
+const additions = [
   {
-    title: "For early childhood education",
-    body: "Support structured social-emotional learning through guided interactive experiences designed for real educational contexts.",
+    title: "Ready scenarios",
+    body: "Clear situations to guide.",
   },
   {
-    title: "For educators",
-    body: "Help reinforce emotional vocabulary, communication habits, turn-taking, empathy, and conflict response through accessible digital support.",
+    title: "Shared language",
+    body: "Simple words children can use.",
   },
   {
-    title: "For future family use",
-    body: "Extend emotional learning beyond institutional settings into everyday family life through consistent and child-friendly interaction.",
+    title: "Repeatable practice",
+    body: "Skills reinforced across routines.",
+  },
+  {
+    title: "Low setup",
+    body: "Designed for existing daycare flow.",
   },
 ];
 
-const practicePoints = [
-  "Short guided interaction sessions",
-  "Individual or small group use",
-  "Integrated into daily routines",
-  "Used as support during real situations",
-  "Flexible across different learning environments",
+const placements = [
+  {
+    title: "Morning circle",
+    body: "Introduce one skill for the day.",
+  },
+  {
+    title: "Small groups",
+    body: "Practice a situation with a few children.",
+  },
+  {
+    title: "After conflict",
+    body: "Reflect on what happened.",
+  },
+  {
+    title: "Transitions",
+    body: "Support waiting, sharing, moving, and turn-taking.",
+  },
 ];
 
-export default function SolutionsPage() {
+export default function DaycaresPage() {
   return (
     <main>
       <PageHero
-        body="Lumi Systems is building tools designed to support emotional and communication learning in environments where these skills matter every day."
-        eyebrow="Solutions"
-        title="Practical emotional learning support"
-      />
+        body="Lumi helps educators guide children through everyday emotional and social situations using short, simple interactions designed for ages 4–6."
+        eyebrow="Daycares"
+        title="Structured emotional learning support for daily daycare life."
+      >
+        <div className="pt-2">
+          <ButtonLink href="/request-demo">Request a Daycare Demo</ButtonLink>
+        </div>
+      </PageHero>
+
       <section className="section-space">
-        <Reveal className="container-shell grid gap-6">
-          {solutions.map((solution, index) => (
-            <article
-              className="grid gap-6 border-b border-[var(--line)] py-10 last:border-0 md:grid-cols-[0.22fr_0.48fr_0.7fr] md:items-start"
-              key={solution.title}
-            >
-              <span className="text-sm font-extrabold text-[var(--blue-strong)]">0{index + 1}</span>
-              <h2 className="text-3xl font-extrabold tracking-normal text-[var(--foreground)]">{solution.title}</h2>
-              <p className="body-large">{solution.body}</p>
-            </article>
-          ))}
+        <Reveal className="container-shell">
+          <div className="grid gap-4 max-w-3xl">
+            <p className="eyebrow">What Lumi adds</p>
+            <h2 className="font-display section-title max-w-[12ch]">Practical support for real daycare routines.</h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {additions.map((item) => (
+              <PremiumCard body={item.body} key={item.title} marker="dot" title={item.title} variant="compact" />
+            ))}
+          </div>
         </Reveal>
       </section>
+
       <section className="section-space bg-[var(--mist)]">
-        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.72fr_0.88fr]">
-          <SectionHeading
-            eyebrow="Why it matters"
-            title="Why this matters for early childhood environments"
-            body="Emotional and social challenges are part of everyday life in daycare settings—yet tools to address them are often limited, inconsistent, or time-dependent. Lumi provides a structured, repeatable way to support emotional learning without adding complexity to daily routines."
-          />
-          <div className="rounded-[2rem] border border-[var(--line)] bg-white/72 p-8 md:p-10">
-            <p className="eyebrow mb-5">How Lumi is used in practice</p>
-            <div className="grid gap-4">
-              {practicePoints.map((point) => (
-                <div className="flex items-center gap-3 border-b border-[var(--line)] pb-4 last:border-0 last:pb-0" key={point}>
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--blue)]" />
-                  <span className="font-extrabold text-[var(--foreground)]">{point}</span>
-                </div>
-              ))}
-            </div>
+        <Reveal className="container-shell grid gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-start lg:gap-16">
+          <div className="grid gap-4">
+            <p className="eyebrow">Where it fits</p>
+            <h2 className="font-display max-w-[11ch] text-[36px] leading-[0.98] tracking-[-0.03em] text-slate-950 md:text-[52px] lg:text-[60px]">
+              Designed for existing daycare flow.
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {placements.map((item) => (
+              <PremiumCard body={item.body} key={item.title} marker="dot" title={item.title} variant="compact" />
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="section-space">
+        <Reveal className="container-shell grid gap-8 rounded-[2rem] border border-[var(--line)] bg-white/60 p-8 md:p-10 lg:grid-cols-[0.85fr_0.6fr] lg:items-end">
+          <div className="grid gap-4">
+            <p className="eyebrow">Pilot</p>
+            <h2 className="font-display max-w-[12ch] text-[36px] leading-[0.98] tracking-[-0.03em] text-slate-950 md:text-[52px] lg:text-[60px]">
+              Pilot Lumi in your daycare environment.
+            </h2>
+            <p className="body-copy max-w-[35rem]">
+              Early pilot partners can help shape scenarios, educator experience, and routine fit.
+            </p>
+          </div>
+          <div className="lg:justify-self-end">
+            <ButtonLink href="/contact">Discuss a Pilot</ButtonLink>
           </div>
         </Reveal>
       </section>
